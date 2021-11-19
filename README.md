@@ -16,3 +16,21 @@ Link to the wireframe: https://xd.adobe.com/view/203b959a-9e27-4bd4-931b-a96c2e6
 
 ## Features
 ### Existing Feature
+
+## Credits
+### Media
+Icons:
+- https://fonts.google.com/icons?selected=Material+Icons+Outlined:assignment_returned
+- https://iconmonstr.com/
+
+Images:
+- https://unsplash.com/photos/YZpuFugdy8Q
+- https://unsplash.com/photos/XYJ-huzNby4
+- https://www.pexels.com/photo/woman-holding-guitar-while-sitting-2118046/
+
+### Acknowledgements
+Inspirations:
+- https://dribbble.com/shots/15220200-Moon-Discography-Page
+- https://dribbble.com/shots/7598609-Parcels-Album-Vinyl-shop-release-concept
+- https://dribbble.com/shots/13866033-Fallgrapp-One-page
+- https://dribbble.com/shots/14382636-Shop-Page-Music-WordPress-Theme
