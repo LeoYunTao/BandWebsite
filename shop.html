@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="h3"><strong class="main-color">Dummy</strong> <span class="light">Band</span></a>
+            <div id="hamburgerContent" class="hidden">
+                <a href="index.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="shop.html" class="medium">Shop</a>
+            </div>
+        </nav>
+        <button class="btn btn-none hamburger-menu" onclick="setMenuActive()">
+            <img src="img/icons/hamburger-menu.svg" alt="hamburger memu">
+        </button>
+    </header>
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="underline d-inline-block">Shop</h1>
+                    <div class="shop-search-bar d-flex">
+                        <p>420 Items</p>
+
+                        <div class="shop-search">
+                            <img src="img/icons/search.svg" class="icon" alt="search">
+                            <input type="text" placeholder="Search">
+                        </div>
+
+                        <button class="btn btn-none shop-filter-btn">
+                            <img src="img/icons/filter.svg" class="icon" alt="filter">
+                        </button>
+                    </div>
+                    <div class="cards" id="items"></div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p><small>&copy;2021, Yun Tao. All rights reserved</small></p>
+    </footer>
+</body>
+
+<script src="js/info.json" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript" defer></script>
+
+</html>

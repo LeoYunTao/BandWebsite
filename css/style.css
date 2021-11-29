@@ -1,0 +1,669 @@
+/* Framework */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+:root {
+    --main-color: #61bbff;
+    --text-color: #535353;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+
+.light {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+a, p, input, select {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+p {
+    line-height: 1.75;
+    margin-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.a-link {
+    color: #2A51D1;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3, .h3 {
+    font-size: 1.25rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.prevent-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.underline {
+    border-bottom: 5px solid var(--main-color);
+    padding-right: 30px;
+}
+
+.overline {
+    border-top: 5px solid var(--main-color);
+    padding-left: 30px;
+}
+
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-round {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.btn:active, .btn:focus {
+    border: none;
+}
+
+.btn:hover, a:hover {
+    cursor: pointer;
+}
+
+.btn-none {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-main {
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 30px;
+    padding: 10px 20px;
+}
+
+/* Header */
+
+header {
+    padding: 15px 0;
+    box-shadow: 0 4px 40px rgba(112, 144, 176, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.hamburger-menu {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+header nav h3 {
+    display: inline-block;
+}
+
+/* Layout */
+
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.row {
+    margin-top: 60px;   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.row:first-child {
+    flex-direction: column-reverse;
+}
+
+.col {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    width: 100%;
+    margin-right: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 40px rgba(112, 144, 176, 0.1);
+    margin-bottom: 30px;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.card-img-top button {
+    bottom: 15px;
+    right: 15px;
+    position: absolute;
+}
+
+.card-member {
+    padding: 15px 15px 0 15px;
+    margin-top: 20px;
+    max-width: 220px;
+}
+
+.card-member .card-img-top {
+    max-height: 150px;
+}
+
+.card-member .card-body{
+    padding: 25px 10px;
+}
+
+.card-song {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.card-song .card-img-top {
+    max-height: 150px;
+}
+
+.card-song .card-body {
+    padding: 10px 15px;
+}
+
+.card-concert {
+    box-shadow: none;
+    background-color: #214E70;
+    margin-right: 0;
+    margin-top: 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card-concert > *  {
+    width: 50%;
+}
+
+.card-concert .card-img-top{
+    max-height: 190px;  
+}
+
+.card-concert .card-body {
+    padding: 15px 10px 35px 10px;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-justify-space-between {
+    justify-content: space-between;
+}
+
+.concert-details {
+    margin-top: 30px;
+}
+
+.concert-detail {
+    margin-bottom: 30px;
+}
+
+.concert-detail img {
+    margin-right: 10px;
+}
+
+footer.container {
+    margin-top: 210px;
+    margin-bottom: 30px;
+}
+
+/* Form */
+input, select {
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid #e1e1e1;
+    box-sizing: content-box;
+    border-radius: 5px;
+    margin-top: 30px;
+    background: none;
+}
+
+input[type="submit"] {
+    padding: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid var(--text-color);
+}
+
+input:placeholder {
+    color: var(--text-color);
+}
+
+.price {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.price p {
+    margin-right: 10px;
+}
+
+select {
+    appearance: none;
+    background-image: url(../img/icons/dropdown-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 90vw 51%;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+
+#hamburgerContent a {
+    display: block;
+    padding: 5px 0;
+}
+
+#hamburgerContent a:hover {
+    font-weight: 500;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.border-radius-sm {
+    border-radius: 5px;
+}
+
+/* Images */
+
+img {
+    border-radius: 5px;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.main-img {
+    object-fit: cover;
+    max-width: 204px;
+    height: 241px;
+}
+
+.img-overlap {
+    display: block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.img-overlap img {
+    position: relative;
+}
+
+.img-overlap div {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.icons {
+    margin-top: 30px;
+}
+
+.icons a {
+    display: flex;
+    margin-right: 15px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+
+.icon-center, .flex-col-center {
+    margin: 0 auto;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .card:last-child {
+        margin-bottom: auto;
+    }
+
+    .card-song {
+        max-width: 175px;
+        min-width: 175px;
+    }
+    
+    .card-song .card-img-top {
+        max-height: 175px;
+    }
+
+    .row:first-child {
+        flex-direction: row;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .main-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .img-overlap div {
+        max-width: 100%;
+
+        top: 13px;
+        left: -15px;
+    }
+
+    .icons {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .main-col {
+        position: relative;
+    }
+
+    .icons img {
+        margin-right: 10px;
+    }
+
+    .btn-main {
+        margin-top: 60px;
+        padding: 15px 30px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .row {
+        margin-top: 120px
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    #hamburgerContent {
+        display: inline;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #hamburgerContent a {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    
+    .card-concert > *  {
+        width: 50%;
+        text-align: right;
+    }
+
+    .card-concert .card-img-top{
+        max-height: 250px;
+    }
+
+    small {
+        font-size: 0.8rem;
+    }
+
+    form.book-ticket {
+        border-top: 10px solid var(--main-color);
+        border-radius: 5px;
+        padding: 0 15px 30px 15px !important;
+        box-shadow: 0 4px 40px #7090b010;
+        background-color: white;
+        max-width: 430px;
+        float: right;
+    }
+
+    .index-background {
+        background-image: url(../img/Path\ 24.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 992px;
+    } 
+
+    .main-col p{
+        margin-top: 30px;
+    }
+
+    .card-concert .card-img-top {
+        max-height: 300px;
+    }
+
+    .card-concert small {
+        font-size: 1rem;
+    }
+
+    .card-concert .card-body {
+        padding: 50px 35px;
+    }
+
+    .cards, .card-concert {
+        margin-top: 30px;
+    }
+
+    form.book-ticket {
+        padding: 0 30px;
+    }
+
+    .concert-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .main-img {
+        max-height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .icons a {
+        margin-right: 20px;
+    }
+
+    h1 {
+        font-size: 3.55555555555rem;
+    }
+
+    .main-img {
+        max-height: 550px;
+    }
+
+    .img-overlap div {
+        top: 30px;
+        left: -25px;
+    }
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    .card-concert .card-img-top {
+        max-height: 400px;
+    }
+
+    .card-concert .card-body {
+        padding: 80px 40px;
+    }
+
+    .card-concert .card-body p {
+        line-height: 2.5;
+    }
+
+    .card-concert {
+        margin-top: 60px;
+    }
+
+    .col-concert-info {
+        margin-top: 60px;
+        padding-left: 80px;
+    }
+
+    .concert-details {
+        max-width: 350px;
+    }
+}

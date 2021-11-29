@@ -1,0 +1,65 @@
+data = `{
+    "songs": [
+        {
+            "name": "Tonikaku Kawaii OP Windsong Lyre Cover",
+            "coverPATH": "img/songs/song-1.jpg",
+            "audioPATH": "audio/genshin_impact_tonikaku_kawaii_op_windsong_lyre_cover_incomplete.mp3"
+        },
+        {
+            "name": "Love is War Season 2 OP - Daddy! Daddy! Do!",
+            "coverPATH": "img/songs/song-1.jpg",
+            "audioPATH": "audio/genshin_impact_tonikaku_kawaii_op_windsong_lyre_cover_incomplete.mp3"
+        },
+        {
+            "name": "Love is War Season 2 OP - Daddy! Daddy! Do!",
+            "coverPATH": "img/songs/song-1.jpg",
+            "audioPATH": "audio/genshin_impact_tonikaku_kawaii_op_windsong_lyre_cover_incomplete.mp3"
+        },
+        {
+            "name": "Love is War Season 2 OP - Daddy! Daddy! Do!",
+            "coverPATH": "img/songs/song-1.jpg",
+            "audioPATH": "audio/genshin_impact_tonikaku_kawaii_op_windsong_lyre_cover_incomplete.mp3"
+        }
+    ],
+    "members": [
+        {
+            "name": "Mary Doe",
+            "role": "Guitarist",
+            "imagePATH": "img/members/member-1.jpg"
+        },
+        {
+            "name": "Pariah",
+            "role": "Composer",
+            "imagePATH": "img/members/member-1.jpg"
+        },
+        {
+            "name": "Mary Doe",
+            "role": "Guitarist",
+            "imagePATH": "img/members/member-1.jpg"
+        }
+    ],
+
+    "items": [
+        {
+            "category": "T-Shirt",
+            "itemsSold": "900K",
+            "name": "MI ho YO T-Shirt",
+            "price": "100.00",
+            "imagePATH": "img/shop/item-1.jpg"
+        },
+        {
+            "category": "T-Shirt",
+            "itemsSold": "900K",
+            "name": "MI ho YO T-Shirt",
+            "price": "100.00",
+            "imagePATH": "img/shop/item-1.jpg"
+        },
+        {
+            "category": "T-Shirt",
+            "itemsSold": "900K",
+            "name": "MI ho YO T-Shirt",
+            "price": "50.00",
+            "imagePATH": "img/shop/item-1.jpg"
+        }
+    ]
+}`

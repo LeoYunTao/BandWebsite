@@ -28,9 +28,15 @@ Images:
 - https://unsplash.com/photos/XYJ-huzNby4
 - https://www.pexels.com/photo/woman-holding-guitar-while-sitting-2118046/
 
+Videos:
+- https://tenor.com/2rMx.gif
+
 ### Acknowledgements
 Inspirations:
 - https://dribbble.com/shots/15220200-Moon-Discography-Page
 - https://dribbble.com/shots/7598609-Parcels-Album-Vinyl-shop-release-concept
 - https://dribbble.com/shots/13866033-Fallgrapp-One-page
 - https://dribbble.com/shots/14382636-Shop-Page-Music-WordPress-Theme
+
+Song Credits:
+- https://www.youtube.com/channel/UCXj8C5C3jMIQJMsyOJk3U8A/videos (My friend's channel with his permission)

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body class="index-background">
+    <header>
+        <nav class="container">
+            <a href="index.html" class="h3"><strong class="main-color">Dummy</strong> <span class="light">Band</span></a>
+            <div id="hamburgerContent" class="hidden">
+                <a href="index.html" class="medium">Home</a>
+                <a href="history.html">History</a>
+                <a href="shop.html">Shop</a>
+            </div>
+        </nav>
+        <button class="btn btn-none hamburger-menu" onclick="setMenuActive()">
+            <img src="img/icons/hamburger-menu.svg" alt="hamburger memu">
+        </button>
+    </header>
+    <main>
+        <section class="container">
+            <section class="row">
+                <div class="col col-md-6 main-col">
+                    <h1><span class="main-color">Ad Astra</span> Abyssosque!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean velit metus, malesuada id hendrerit at, finibus vel risus.</p>
+                    <a class="btn btn-main" href="#concert">Book Concert</a>
+                    <div class="icons d-flex">
+                        <a href="#"><img src="img/icons/instagram.svg" class="icon" alt="Instagram"></a>
+                        <a href="#"><img src="img/icons/twitter.svg" class="icon" alt="Tweeter"></a>
+                        <a href="#"><img src="img/icons/youtube.svg" class="icon" alt="Youtube"></a>
+                    </div>
+                </div>
+                <div class="col col-md-1"></div>
+                <div class="col col-md-5">
+                    <div class="img-overlap">
+                        <img src="img/main-img.jpg" class="img-fluid border-radius-sm main-img" alt="main img">
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+            <section class="row">
+                <div class="d-flex flex-justify-space-between col">
+                    <h2 class="underline">Songs</h2>
+                    <a href="#" class="d-flex flex-center a-link arrow-hover-animation">
+                        <span>See More</span> &nbsp;&nbsp;
+                        <img src="img/icons/right-arrow.svg" height="7px"  class="icon" alt="arrow right">
+                    </a>
+                </div>
+                <section class="cards" id="songs"></section>
+            </section>
+            <section class="row">
+                <div class="d-flex flex-justify-space-between">
+                    <h2 class="underline">Members</h2>
+                </div>
+                <section class="cards" id="members"></section>
+            </section>
+            <section class="row" id="concert">
+                <div class="d-flex flex-justify-space-between">
+                    <h2 class="underline">Concert</h2>
+                </div>
+                <div class="cards">
+                    <div class="card card-concert">
+                        <div class="card-img-top" style="background-image: url('video/marching-band-band.gif');"></div>
+                        <div class="card-body">
+                            <p class="text-white"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus sagittis malesuada. Donec semper aliquam purus, placerat euismod odio ultricies id. Nullam ut ex nec lorem mattis fringilla. Vestibulum non metus tortor.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col col-md-5 col-concert-info">
+                    <h2>Book A Ticket Now!</h2>
+                    <section class="concert-details">
+                        <span class="concert-detail d-flex flex-center">
+                            <img src="img/icons/location.svg" width="24px" height="24px" class="icon" alt="Location">
+                            <h3 class="medium d-inline-block">TBA</h3>
+                        </span>
+                        <span class="concert-detail d-flex flex-center">
+                            <img src="img/icons/ticket.svg" width="24px" height="24px" class="icon" alt="Location">
+                            <h3 class="medium d-inline-block">999</h3>
+                        </span>
+                        <span class="concert-detail d-flex flex-center">
+                            <img src="img/icons/date.svg" width="24px" height="24px" class="icon" alt="Location">
+                            <h3 class="medium d-inline-block">22 Oct 3022</h3>
+                        </span>
+                        <span class="concert-detail d-flex">
+                            <img src="img/icons/email.svg" width="24px" height="24px" class="icon" alt="Location">
+                            <h3 class="medium d-inline-block break-word">S10219150@connect.np.edu.sg</h3>
+                        </span>
+                        <span class="concert-detail d-flex">
+                            <img src="img/icons/phone.svg" width="24px" height="24px" class="icon" alt="Location">
+                            <h3 class="medium d-inline-block break-word">+65 1234 5678</h3>
+                        </span>
+                    </section>
+                </div>
+                <div class="col col-md-1"></div>
+                <div class="col col-md-6">
+                    <form class="book-ticket">
+                        <input type="text" required minlength="3" placeholder="Name">
+                        <input type="email" required placeholder="Email Address">
+                        <input type="tel" required minlength="8" placeholder="Phone Number">
+                        <select name="ticket-number" required>
+                            <option selected value="0">Tickets</option>
+                            <option value="1">1 Ticket</option>
+                            <option value="2">2 Tickets</option>
+                            <option value="3">3 Tickets</option>
+                            <option value="4">4 Tickets</option>
+                            <option value="5">5 Tickets</option>
+                        </select>
+                        <div class="price overline">
+                            <p><small>SUBTOTAL</small></p>
+                            <h3 class="medium">S$100.00</h3>
+                        </div>
+                        <input type="submit" class="btn btn-main" value="Proceeed to Checkout">
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="container">
+        <p><small>&copy;2021, Yun Tao. All rights reserved</small></p>
+    </footer>
+</body>
+
+<script src="js/info.json" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript" defer></script>
+
+</html>

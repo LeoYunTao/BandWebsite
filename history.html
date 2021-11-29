@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="h3"><strong class="main-color">Dummy</strong> <span class="light">Band</span></a>
+            <div id="hamburgerContent" class="hidden">
+                <a href="index.html">Home</a>
+                <a href="history.html" class="medium">History</a>
+                <a href="shop.html">Shop</a>
+            </div>
+        </nav>
+        <button class="btn btn-none hamburger-menu" onclick="setMenuActive()">
+            <img src="img/icons/hamburger-menu.svg" alt="hamburger memu">
+        </button>
+    </header>
+    <main>
+        <section id="history-title-background">
+            <div class="row container">
+                <div class="col col-md-6 d-flex flex-direction-column margin-center">
+                    <h1 class="text-center">The History of <strong class="main-color">Dummy Band</strong></h1>
+                    <p class="text-center">Find out the history of this band and how it all begin.</p>
+                    <a class="btn margin-center margin-top-lg" href="#"><img src="img/icons/down-arrow.svg" class="icon" alt="scroll down"></a>
+                </div>
+            </div>
+        </section>
+        <section id="history-body-background">
+            <div class="row container">
+                <div class="col col-md-8 col-lg-6 d-flex flex-direction-column margin-center">
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor elit sit amet congue fringilla. Duis tempus, felis eu commodo suscipit, risus ante mattis metus, in pharetra felis libero non neque. Aenean interdum scelerisque turpis sit amet euismod. Nullam vel felis sollicitudin, malesuada turpis ac, aliquam ligula. Nunc egestas, ligula non congue consectetur, massa ligula tincidunt massa, at pharetra enim odio vitae leo. Vivamus eget ligula tortor. Duis velit nisi, placerat in leo et, fringilla pulvinar sem. </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p><small>&copy;2021, Yun Tao. All rights reserved</small></p>
+    </footer>
+</body>
+
+<script src="js/info.json" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript" defer></script>
+
+</html>
