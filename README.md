@@ -27,9 +27,19 @@ Images:
 - https://unsplash.com/photos/YZpuFugdy8Q
 - https://unsplash.com/photos/XYJ-huzNby4
 - https://www.pexels.com/photo/woman-holding-guitar-while-sitting-2118046/
+- https://unsplash.com/photos/Wr0TpKqf26s
+- https://unsplash.com/photos/6Nub980bI3I
+- https://unsplash.com/photos/qeDcKFADdp8
+- https://unsplash.com/photos/fEt6Wd4t4j0
+- https://unsplash.com/photos/c_GmwfHBDzk
+- https://unsplash.com/photos/QXevDflbl8A
+- https://unsplash.com/photos/9y1cTVKe1IY 
 
 Videos:
 - https://tenor.com/2rMx.gif
+
+Text:
+- https://en.wikipedia.org/wiki/Genshin_Impact
 
 ### Acknowledgements
 Inspirations:
@@ -40,3 +50,7 @@ Inspirations:
 
 Song Credits:
 - https://www.youtube.com/channel/UCXj8C5C3jMIQJMsyOJk3U8A/videos (My friend's channel with his permission)
+
+
+Code:
+- https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/

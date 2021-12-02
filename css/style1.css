@@ -76,6 +76,10 @@ h3, .h3 {
   font-size: 1.25rem;
 }
 
+h4 {
+  font-weight: 500;
+}
+
 .text-center {
   text-align: center;
 }
@@ -87,9 +91,14 @@ h3, .h3 {
 }
 
 .underline {
+  display: block;
+  width: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   border-bottom: 5px solid var(--main-color);
-  padding-right: 30px;
-  padding-bottom: 5px;
+  transition: 0.5s;
+  margin-top: 5px;
 }
 
 .overline {
@@ -101,6 +110,8 @@ h3, .h3 {
   border-radius: 5px;
   font-weight: 500;
   border: none;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 .btn-round {
@@ -109,7 +120,7 @@ h3, .h3 {
   height: 40px;
 }
 
-.btn:active, .btn:focus {
+.btn:active, .btn:focus, .btn-outline-main:focus {
   border: none;
 }
 
@@ -122,12 +133,15 @@ h3, .h3 {
   color: white;
   margin-top: 30px;
   padding: 10px 20px;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
 }
 
 .btn-main:hover {
   background-color: #59a8e4;
+}
+
+.btn-main:focus {
+  background-color: #3f79a5;
+  transition-duration: 0;
 }
 
 .btn-outline-main {
@@ -136,6 +150,11 @@ h3, .h3 {
   color: var(--main-color);
   margin-top: 30px;
   padding: 10px 20px;
+}
+
+.btn-outline-main:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 
 .btn-none {
@@ -181,7 +200,6 @@ header nav h3 {
   display: none;
 }
 
-/* Layout */
 .container {
   width: 100%;
   padding: 0 20px;
@@ -244,6 +262,7 @@ header nav h3 {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 4px 40px rgba(112, 144, 176, 0.1);
+  transition: 0.3s ease-in-out;
 }
 .card .card-img-top {
   width: 100%;
@@ -255,16 +274,58 @@ header nav h3 {
   position: relative;
 }
 
+.card:hover {
+  box-shadow: 0 4px 40px rgba(112, 144, 176, 0.15);
+  transform: scale(1.05);
+}
+
 .card:last-child {
   margin-bottom: 0;
 }
 
-footer.container {
+footer.copyright-footer {
   margin-top: 210px;
   margin-bottom: 30px;
 }
 
-/* Form */
+footer.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 4px 40px rgba(112, 144, 176, 0.1);
+}
+footer.fixed-footer .song-control {
+  gap: 10px;
+}
+footer.fixed-footer h4 {
+  margin-bottom: 5px;
+}
+footer.fixed-footer > div {
+  padding: 15px 20px;
+}
+footer.fixed-footer input[type=range] {
+  padding: 0;
+  margin: 0 10px;
+}
+footer.fixed-footer p {
+  margin: 0;
+}
+footer.fixed-footer .volume input {
+  max-width: 100px;
+  margin-right: 0;
+}
+
+.cover-img-background {
+  width: 75px;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
 input, select {
   width: 100%;
   padding: 15px 25px;
@@ -310,7 +371,6 @@ select:hover {
   border-radius: 5px;
 }
 
-/* Images */
 img {
   border-radius: 5px;
 }
@@ -325,26 +385,6 @@ img {
   height: 241px;
 }
 
-@keyframes move-bottom-left {
-  from {
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 5%;
-    left: -5%;
-  }
-}
-@keyframes move-top-right {
-  from {
-    top: 5%;
-    left: -5%;
-  }
-  to {
-    top: -5%;
-    right: -5%;
-  }
-}
 .img-overlap {
   display: block;
   position: relative;
@@ -380,6 +420,21 @@ img {
   border-radius: 0;
 }
 
+.fade-in {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes move-bottom-left {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 5%;
+    left: -5%;
+  }
+}
 .card-member {
   padding: 15px 15px 0 15px;
   max-width: 220px;
@@ -422,11 +477,14 @@ img {
   width: 100%;
 }
 
-.concert-details {
-  margin-top: 30px;
+.card-concert:hover {
+  transform: scale(1);
 }
-.concert-details .concert-detail {
-  margin-bottom: 30px;
+
+.concert-details {
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
 }
 .concert-details .concert-detail img {
   margin-right: 10px;
@@ -457,30 +515,39 @@ img {
   position: relative;
   flex-wrap: wrap;
   align-items: center;
-  gap: 5px 60px;
-  box-shadow: 0 4px 40px rgba(112, 144, 176, 0.05);
+  gap: 30px 60px;
+  margin-top: 90px;
+  margin-bottom: 60px;
+  font-size: 1rem;
+}
+.shop-search-bar select, .shop-search-bar button {
   padding: 15px;
-  border: 2px solid #F2F2F2;
+  border: 1px solid #989898;
+  border-radius: 5px;
 }
 .shop-search-bar .shop-search {
   position: relative;
-  width: 50%;
+  width: 100%;
+  max-width: 500px;
 }
 .shop-search-bar .shop-search img {
   position: absolute;
   top: calc(50% - 12px);
+  left: 15px;
 }
 .shop-search-bar .shop-search input {
   margin-top: 0;
   border: 0;
-  padding: 10px 0 10px 30px;
-  border-bottom: 1px solid #e1e1e1;
-  width: 50%;
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: 1px solid #989898;
+  border-radius: 5px;
 }
-.shop-search-bar .shop-filter-btn {
-  position: absolute;
-  right: 15px;
-  top: 18px;
+.shop-search-bar select {
+  margin-top: 0;
+  width: initial;
+  padding-right: 50px;
+  min-width: 270px;
 }
 .shop-search-bar p {
   margin: 0;
@@ -713,9 +780,7 @@ img {
   }
 
   .concert-details {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 

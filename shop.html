@@ -19,6 +19,7 @@
                 <a href="index.html">Home</a>
                 <a href="history.html">History</a>
                 <a href="shop.html" class="medium">Shop</a>
+                <a href="mailto:s10219150@connect.np.edu.sg">Contact</a>
             </div>
         </nav>
         <button class="btn btn-none hamburger-menu" onclick="setMenuActive()">
@@ -29,14 +30,21 @@
         <section class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="underline d-inline-block">Shop</h1>
+                    <h1 class="d-inline-block fade-in">Shop <hr class="underline"></h1>
                     <div class="shop-search-bar d-flex">
-                        <p>420 Items</p>
 
                         <div class="shop-search">
                             <img src="img/icons/search.svg" class="icon" alt="search">
-                            <input type="text" placeholder="Search">
+                            <input type="text" placeholder="Search" id="shop-search-input">
                         </div>
+
+                        <select name="sort-by" id="shop-search-sort">
+                            <option value="NameAsc">Name Ascending</option>
+                            <option value="NameDesc">Name Descending</option>
+                            <option value="MostPopular">Most Popular</option>
+                            <option value="PriceLowest">Price (Lowest)</option>
+                            <option value="PriceHighest">Price (Highest)</option>
+                        </select>
 
                         <button class="btn btn-none shop-filter-btn">
                             <img src="img/icons/filter.svg" class="icon" alt="filter">
@@ -47,13 +55,17 @@
                 </div>
             </div>
         </section>
+        <footer class="container fixed-footer hidden" id="shop-footer">
+            <p>sdasd</p>
+        </footer>
     </main>
-    <footer class="container">
+    <footer class="container copyright-footer">
         <p><small>&copy;2021, Yun Tao. All rights reserved</small></p>
     </footer>
 </body>
 
 <script src="js/info.json" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript" defer></script>
+<script src="js/animation.js" type="text/javascript" defer></script>
 
 </html>
