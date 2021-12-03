@@ -4,7 +4,7 @@ This is a fictional band website created for ID assignment 1 project
 ## Deisgn Process
 Before I begin wireframing the website, I looked for multiple inspirations on the internet for idea on how to design a band website.
 
-I also thought about the diffent stakeholder's goal:
+I also thought about the different stakeholder's goal:
 - As a Fan, I want to go to their website, so that book concert, buy merch, listen to some of their music and learn more about their history
 - As a Other Band, I want to contact them to collaberate with them in the future
 - As a musician, I want to contact them to join their band
