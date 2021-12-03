@@ -12,7 +12,7 @@ function setMenuActive() {
 
 const info = JSON.parse(data);
 
-if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
+if (window.location.pathname == "/" || window.location.pathname.includes("/index.html")) {
     const songs = document.getElementById("songs");
     const members = document.getElementById("members");
 
@@ -72,7 +72,7 @@ if (window.location.pathname == "/" || window.location.pathname == "/index.html"
     });
 
 }
-else if (window.location.pathname == "/shop.html") {
+else if (window.location.pathname.includes("/shop.html")) {
     const itemsElement = document.getElementById("items");
 
     let items = [];
