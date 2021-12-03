@@ -1,4 +1,3 @@
-/* Framework */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Typography */
 .light {
   font-weight: 400;
 }
@@ -170,7 +168,6 @@ h4 {
   background-color: transparent;
 }
 
-/* Header */
 header {
   padding: 15px 0;
   box-shadow: 0 4px 40px rgba(112, 144, 176, 0.05);
@@ -184,7 +181,6 @@ header nav h3 {
   display: inline-block;
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
   position: absolute;
   right: 20px;
@@ -521,7 +517,7 @@ img {
   margin-right: 10px;
 }
 
-#history-body-background, #history-title-background {
+#history-title-background, #history-body-background {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -620,6 +616,7 @@ table thead {
 }
 table th {
   padding-bottom: 15px;
+  padding-right: 30px;
 }
 
 #cart-body input, #cart-body select {

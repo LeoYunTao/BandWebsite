@@ -1,3 +1,4 @@
+// Search the for the item object based on the item name
 function searchItem(itemName) {
     let itemx;
     info.items.forEach(item => {
@@ -9,6 +10,7 @@ function searchItem(itemName) {
     return itemx;
 }
 
+// Change the price of the item based on the quantity
 function changePrice(element) {
     const tr = element.parentNode.parentNode;
 
@@ -21,6 +23,7 @@ function changePrice(element) {
     priceElement.textContent = "S$" + newPrice;
 }
 
+// Remove item from cart
 function removeItem(element) {
     if (confirm('Are you sure you want to delete this item?')) {
         const tr = element.parentNode.parentNode;
@@ -37,7 +40,7 @@ function removeItem(element) {
     }
 }
 
-console.log(sessionStorage);
+// Update the items in the cart to DOM
 sessionStorage.getItem("items").split(',').forEach(itemName => {
     let item = searchItem(itemName);
 
@@ -61,7 +64,7 @@ sessionStorage.getItem("items").split(',').forEach(itemName => {
         <td>
             <p class="cart-price">S$${item.price}</p>
         </td>
-        <td><button class="btn btn-red" onclick="removeItem(this)">remove</button></td>
+        <td><button class="btn btn-red" onclick="removeItem(this)">Remove</button></td>
     </tr> `;
 });
 
@@ -69,7 +72,6 @@ const totalPriceElement = document.querySelector('#total-price');
 let totalPrice = 0;
 
 let prices = document.querySelectorAll(".cart-price");
-
 
 document.querySelectorAll(".quantity").forEach(element => {
     element.addEventListener("change", () => {
@@ -79,6 +81,7 @@ document.querySelectorAll(".quantity").forEach(element => {
 
 updatePrice();
 
+// Update the total price of all the items in the cart
 function updatePrice() {
     totalPrice = 0;
     prices.forEach(price => {
@@ -86,4 +89,10 @@ function updatePrice() {
     });
 
     totalPriceElement.textContent = "S$" + totalPrice.toFixed(2);
+}
+
+// Checkout once 
+function checkOut() {
+    alert("Thank you for your purchase!");
+    sessionStorage.clear();
 }

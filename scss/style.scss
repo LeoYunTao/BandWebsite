@@ -563,15 +563,12 @@ img {
     }
 }
 
-// History Section
-%history-background {
+#history-title-background, #history-body-background {
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #history-title-background {
-    @extend %history-background;
-
     background-image: url("../img/history-title-background.svg");
     background-position: center;
         
@@ -581,8 +578,6 @@ img {
 }
 
 #history-body-background {
-    @extend %history-background;
-
     background-image: url("../img/history-body-background.svg");
     background-position: center -5vh;
 
@@ -683,6 +678,7 @@ table {
 
     th {
         padding-bottom: 15px;
+        padding-right: 30px;
     }
     
     padding-bottom: 30px;

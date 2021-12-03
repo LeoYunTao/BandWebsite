@@ -1,3 +1,4 @@
+// Check whether an element is in the viewport
 function isInView(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -8,7 +9,8 @@ function isInView(element) {
     );
 }
 
-function underlineAnimation() {
+// Underline and fade in animation
+function Animations() {
     const underlines = document.querySelectorAll('.underline');
     underlines.forEach(underline => {
         if (isInView(underline)) {
@@ -25,9 +27,9 @@ function underlineAnimation() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    underlineAnimation();
+    Animations();
 });
 
 document.addEventListener('scroll', () => {
-    underlineAnimation();
+    Animations();
 });

@@ -1,4 +1,6 @@
+// Mainly about the audio player for the songs
 
+// Convert second to minutes and seconds
 function secondsToTime(sec) {
     const minutes = Math.floor(sec / 60);
     const seconds = Math.floor(sec % 60);
@@ -6,8 +8,10 @@ function secondsToTime(sec) {
     return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
 }
 
-function findSong(songs, songName) {
 
+// find song in the songs array and return the song object if found
+function findSong(songs, songName) {
+    let songIndex = 0;
     let songFound = null;
 
     songs.forEach(song => {
@@ -15,9 +19,10 @@ function findSong(songs, songName) {
             songFound = song;
             return;
         }
+        songIndex++;
     });
 
-    return songFound;
+    return [songFound, songIndex];
 }
 
 let songs = info.songs;
@@ -34,6 +39,7 @@ let currentTime = document.getElementById("current-time");
 let timeEnd = document.getElementById("time-end");
 let playerSlider = document.getElementById("time-playing");
 
+// Playing and updating the audio player and icon
 function footerAudio(element) {
     if (playerFooterAudio.paused) {
         playerFooterAudio.play();
@@ -47,6 +53,7 @@ function footerAudio(element) {
     }
 }
 
+// Update the audio player
 function playAudio(element) {
     playerFooter.style.display = "block";
 
@@ -68,7 +75,33 @@ function playAudio(element) {
     cardSongNameElement = cardElement.querySelector(".song-name");
     cardIconElement = element.firstElementChild;
 
-    let song = findSong(songs, cardSongNameElement.textContent);
+    findSongAndPlay(cardSongNameElement.textContent);
+
+}
+
+// see the time of the song and the slider that corresponds to the time
+playerFooterAudio.addEventListener("timeupdate", () => {
+    currentTime.textContent = secondsToTime(playerFooterAudio.currentTime);
+    playerSlider.value = (playerFooterAudio.currentTime / playerFooterAudio.duration) * 100;
+});
+
+// Change to pause icon when the song ends
+playerFooterAudio.addEventListener("ended", () => {
+    cardElement.querySelector(".icon").src = "img/icons/play-arrow.svg";
+    // TODO: move to next song
+});
+
+// Change the audio volume
+playerSlider.addEventListener("change", event => {
+    let percentage = event.target.value / 100;
+    playerFooterAudio.currentTime = percentage * playerFooterAudio.duration;
+    currentTime.textContent = secondsToTime(playerFooterAudio.currentTime);
+});
+
+// Find the song and play it
+function findSongAndPlay(songName) {
+    let song = findSong(songs, songName)[0];
+
     playerFooterAudio.src = song.audioPATH;
     cardIconElement.src = "img/icons/pause.svg";
     playerFooterPlayIcon.src = "img/icons/pause.svg";
@@ -79,24 +112,21 @@ function playAudio(element) {
         timeEnd.textContent = secondsToTime(playerFooterAudio.duration);
         playerFooterAudio.play();
     });
-
 }
 
-playerFooterAudio.addEventListener("timeupdate", () => {
-    currentTime.textContent = secondsToTime(playerFooterAudio.currentTime);
-    playerSlider.value = (playerFooterAudio.currentTime / playerFooterAudio.duration) * 100;
-});
+let currentSongIndex = null;
 
-playerFooterAudio.addEventListener("ended", () => {
-    cardElement.querySelector(".icon").src = "img/icons/play-arrow.svg";
-    // move to next song
-});
+// Play next Song
+function nextSong() {
+    currentSongIndex = currentSongIndex < songs.length-1 ? currentSongIndex+1 : 0;
+    findSongAndPlay(songs[currentSongIndex].name);
+}
 
-playerSlider.addEventListener("change", event => {
-    let percentage = event.target.value / 100;
-    playerFooterAudio.currentTime = percentage * playerFooterAudio.duration;
-    currentTime.textContent = secondsToTime(playerFooterAudio.currentTime);
-});
+// Play previous Song
+function prevSong() {
+    currentSongIndex = currentSongIndex > 0 ? currentSongIndex-1 : songs.length-1;
+    findSongAndPlay(songs[currentSongIndex].name);
+}
 
 let volume = document.getElementById("volume");
 playerFooterAudio.volume = 0.5;

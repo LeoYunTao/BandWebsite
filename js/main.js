@@ -1,21 +1,26 @@
+// Add session if it is not created
 if (sessionStorage.getItem("items") === null) {
     sessionStorage.setItem("items", []);
 }
 
+// Update the ticket price
 function updateTicketPrice(TICKETPRICE) {
     const ticketNumber = parseInt(document.querySelector("#ticket-number").value);
     const totalPrice = document.querySelector("#total-price");
     totalPrice.textContent = "S$" + parseFloat(ticketNumber * TICKETPRICE).toFixed(2);
 }
 
+// Hamburger menu setting the content to be visible on click
 function setMenuActive() {
     const hamburgerContent = document.getElementById("hamburgerContent");
     hamburgerContent.className == "active" ? hamburgerContent.className = "hidden" : hamburgerContent.className = "active";
 }
 
+// Loads the items from info.json file
 const info = JSON.parse(data);
 
 if (window.location.pathname == "/" || window.location.pathname.includes("/index.html")) {
+    // Loads songs and members for the home page from info.json file
     const songs = document.getElementById("songs");
     const members = document.getElementById("members");
 
@@ -48,6 +53,7 @@ if (window.location.pathname == "/" || window.location.pathname.includes("/index
         ` ;
     });
 
+    // Update Ticket price on ticket number change
     const TICKETPRICE = 100;
     document.querySelector("#ticket-number").addEventListener("change", () => {
         updateTicketPrice(TICKETPRICE);
@@ -55,6 +61,7 @@ if (window.location.pathname == "/" || window.location.pathname.includes("/index
 
     updateTicketPrice(TICKETPRICE);
 
+    // minus the ticket onced booked and update the ticket remaining
     let ticketsLeft = 10;
     const ticketRemaining = document.querySelector("#ticket-remaining");
     ticketRemaining.textContent = ticketsLeft.toLocaleString();
@@ -88,6 +95,7 @@ else if (window.location.pathname.includes("/shop.html")) {
     
     checkValue(shopSearchSort, items, itemsElement);
 
+    // find the item on the search bar
     const shopSearchInput = document.querySelector("#shop-search-input");
     shopSearchInput.addEventListener("keyup", event => {
         updateItems(items.filter(item => item.name.toLowerCase().includes(shopSearchInput.value.toLowerCase())), itemsElement);
@@ -99,6 +107,7 @@ else if (window.location.pathname.includes("/shop.html")) {
 
 }
 
+// Sort the items based on the sort by category selected
 function checkValue(element, items, itemsElement) {
     if (element.value == "NameAsc") {
         updateItems(items.sort((a, b) => a.name.localeCompare(b.name)), itemsElement);
@@ -117,6 +126,7 @@ function checkValue(element, items, itemsElement) {
     }
 }
 
+// Update the items on the page
 function updateItems(items, itemsElement) {
     console.log(sessionStorage.getItem("items"));
     itemsElement.innerHTML = "";

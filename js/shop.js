@@ -1,7 +1,9 @@
+// This file is mainly used to display the number of items in the cart
+// and for the interactions for remove item button and add to cart button
+
 let cartItemsElement = document.querySelector('#cart-items');
 
-displayItems();
-
+// Display the number of items in the cart
 function displayItems() {
     if (sessionStorage.getItem("items") === "") {
         cartItemsElement.textContent = 0;
@@ -41,3 +43,5 @@ function toggleState(element) {
         displayItems();
     }
 }
+
+displayItems();
