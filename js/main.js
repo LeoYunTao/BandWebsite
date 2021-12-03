@@ -19,7 +19,7 @@ function setMenuActive() {
 // Loads the items from info.json file
 const info = JSON.parse(data);
 
-if (window.location.pathname == "/" || window.location.pathname.includes("/index.html")) {
+if (window.location.pathname == "https://leoyuntao.github.io/BandWebsite/" || window.localStorage.pathname == "/" || window.location.pathname.includes("/index.html")) {
     // Loads songs and members for the home page from info.json file
     const songs = document.getElementById("songs");
     const members = document.getElementById("members");
