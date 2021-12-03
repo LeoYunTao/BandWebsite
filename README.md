@@ -47,10 +47,10 @@ Inspirations:
 - https://dribbble.com/shots/7598609-Parcels-Album-Vinyl-shop-release-concept
 - https://dribbble.com/shots/13866033-Fallgrapp-One-page
 - https://dribbble.com/shots/14382636-Shop-Page-Music-WordPress-Theme
+- https://dribbble.com/shots/10345636-Shopping-Product-Page-UI/attachments/2205978?mode=media
 
 Song Credits:
 - https://www.youtube.com/channel/UCXj8C5C3jMIQJMsyOJk3U8A/videos (My friend's channel with his permission)
-
 
 Code:
 - https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="index-background">
     <header>
@@ -19,6 +19,7 @@
                 <a href="index.html" class="medium">Home</a>
                 <a href="history.html">History</a>
                 <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
                 <a href="mailto:s10219150@connect.np.edu.sg">Contact</a>
             </div>
         </nav>
@@ -34,9 +35,9 @@
                     <p>A virtal band made for ID Project. Dummy band website features many aspects of our band. Have fun exploring our website!</p>
                     <a class="btn btn-main" href="#concert">Book Concert</a>
                     <div class="icons d-flex">
-                        <a href="#"><img src="img/icons/instagram.svg" class="icon" alt="Instagram"></a>
-                        <a href="#"><img src="img/icons/twitter.svg" class="icon" alt="Tweeter"></a>
-                        <a href="#"><img src="img/icons/youtube.svg" class="icon" alt="Youtube"></a>
+                        <a href="https://www.instagram.com/genshinimpact/" target="_blank"><img src="img/icons/instagram.svg" class="icon" alt="Instagram"></a>
+                        <a href="https://twitter.com/GenshinImpact?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="img/icons/twitter.svg" class="icon" alt="Tweeter"></a>
+                        <a href="https://www.youtube.com/channel/UCXj8C5C3jMIQJMsyOJk3U8A" target="_blank"><img src="img/icons/youtube.svg" class="icon" alt="Youtube"></a>
                     </div>
                 </div>
                 <div class="col col-md-1"></div>
@@ -71,14 +72,14 @@
                     <div class="card card-concert">
                         <div class="card-img-top" style="background-image: url('video/marching-band-band.gif');"></div>
                         <div class="card-body">
-                            <p class="text-white"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus sagittis malesuada. Donec semper aliquam purus, placerat euismod odio ultricies id. Nullam ut ex nec lorem mattis fringilla. Vestibulum non metus tortor.</small></p>
+                            <p class="text-white"><small>Join our concert featuring all our members from dummy band. Live on stage, we will be performing many of our popular songs. Remember to book the ticket and support us there. We hope to see you soon!</small></p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="row">
                 <div class="col col-md-5 col-concert-info">
-                    <h2>Book A Ticket Now!</h2>
+                    <h2>Book Tickets Now!</h2>
                     <section class="concert-details d-flex">
                         <span class="concert-detail d-flex flex-center">
                             <img src="img/icons/location.svg" width="24px" height="24px" class="icon" alt="Location">
@@ -126,26 +127,27 @@
             </section>
         </section>
 
-        <footer class="fixed-footer">
+        <footer class="fixed-footer" id="player-footer">
             <div class="container d-flex">
-                
+                <audio type="audio/mp3" style="display: none;" id="player-audio"></audio>
                 <div>
                     <h4 id="song-name">Tonikaku Kawaii OP Windsong Lyre Cover</h4>
-                    <div class="d-flex" style="margin-bottom: 5px;">
-                        <p id="current-time">0:00</p>
-                        <input type="range" min="0" max="100">
-                        <p id="time-end">5:10</p>
-                    </div>
                     <div class="d-flex flex-justify-space-between">
                         <div class="d-flex song-control">
                             <button class="btn btn-none"><img src="img/icons/previous.svg" alt="prev"></button>
-                            <button class="btn btn-round"><img src="img/icons/pause.svg" alt="pause"></button>
+                            <button class="btn btn-round" onclick="footerAudio(this)"><img id="play-icon" src="img/icons/pause.svg" alt="pause"></button>
                             <button class="btn btn-none"><img src="img/icons/next.svg" alt="next"></button>
+                        </div>
+
+                        <div class="d-flex">
+                            <p id="current-time">0:00</p>
+                            <input type="range" min="0" max="100" value="0" id="time-playing">
+                            <p id="time-end">0:00</p>
                         </div>
 
                         <div class="d-flex volume">
                             <button class="btn btn-none"><img src="img/icons/volume.svg" alt="play"></button>
-                            <input type="range" min="0" max="100" id="volume">
+                            <input type="range" min="0" max="100" value="50" id="volume">
                         </div>
                     </div>
                 </div>
@@ -160,5 +162,6 @@
 <script src="js/info.json" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript" defer></script>
 <script src="js/animation.js" type="text/javascript" defer></script>
+<script src="js/audioPlayer.js" type="text/javascript" defer></script>
 
 </html>

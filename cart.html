@@ -18,8 +18,8 @@
             <div id="hamburgerContent" class="hidden">
                 <a href="index.html">Home</a>
                 <a href="history.html">History</a>
-                <a href="shop.html" class="medium">Shop</a>
-                <a href="cart.html">Cart</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html" class="medium">Cart</a>
                 <a href="mailto:s10219150@connect.np.edu.sg">Contact</a>
             </div>
         </nav>
@@ -31,32 +31,32 @@
         <section class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="d-inline-block fade-in">Shop <hr class="underline"></h1>
-                    <div class="shop-search-bar d-flex">
-
-                        <div class="shop-search">
-                            <img src="img/icons/search.svg" class="icon" alt="search">
-                            <input type="text" placeholder="Search" id="shop-search-input">
-                        </div>
-
-                        <select name="sort-by" id="shop-search-sort">
-                            <option value="NameAsc">Name Ascending</option>
-                            <option value="NameDesc">Name Descending</option>
-                            <option value="MostPopular">Most Popular</option>
-                            <option value="PriceLowest">Price (Lowest)</option>
-                            <option value="PriceHighest">Price (Highest)</option>
-                        </select>
-
-                        <button class="btn btn-none shop-filter-btn">
-                            <img src="img/icons/filter.svg" class="icon" alt="filter">
-                        </button>
-
-                        <a href="cart.html" class="btn btn-main d-flex flex-center">
-                            <img src="img/icons/shopping-cart.svg" class="icon" alt="cart"> &nbsp;&nbsp; <span id="cart-items">0</span>
-                        </a>
-                    </div>
-                    <div class="cards" id="items"></div>
+                    <h1 class="d-inline-block fade-in">Cart <hr class="underline"></h1>
                     
+                    <form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Size</th>
+                                    <th>Quantity</th>
+                                    <th>Total Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-body">
+                            </tbody>
+                        </table>
+
+                        <div class="d-inline-flex flex-direction-column">
+                            <div class="price overline float-left">
+                                <p><small>SUBTOTAL</small></p>
+                                <h3 class="medium" id="total-price">S$0.00</h3>
+                            </div>
+        
+                            <button class="btn btn-main">Checkout</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -69,6 +69,6 @@
 <script src="js/info.json" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript" defer></script>
 <script src="js/animation.js" type="text/javascript" defer></script>
-<script src="js/shop.js" type="text/javascript" defer></script>
+<script src="js/cart.js" type="text/javascript" defer></script>
 
 </html>

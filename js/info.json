@@ -1,3 +1,6 @@
+// Data about soongs, members and items
+// Not really JSON but used it cuz its easier than reading files
+
 data = `{
     "songs": [
         {
@@ -53,6 +56,14 @@ data = `{
             "price": "250.00",
             "imagePATH": "img/shop/item-3.jpg",
             "dateReleased": "16/03/2020"
+        },
+        {
+            "category": "T-Shirt",
+            "itemsSold": "23K",
+            "name": "Logo T-Shirt",
+            "price": "20.00",
+            "imagePATH": "img/shop/item-4.jpg",
+            "dateReleased": "16/02/2020"
         }
     ]
 }`

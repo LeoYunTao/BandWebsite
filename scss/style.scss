@@ -1,4 +1,4 @@
-/* Framework */
+// Framework
 
 * {
     margin: 0;
@@ -18,7 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Typography */
+// Typography
 
 .light {
     font-weight: 400;
@@ -40,7 +40,7 @@ html {
     word-break: break-word;
 }
 
-a, p, input, select, button {
+a, p, input, select, button, td {
     font-family: var(--body-font);
     color: var(--text-color);
     font-size: 1rem;
@@ -60,8 +60,13 @@ a {
     color: #2A51D1;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, th {
     font-family: var(--heading-font);
+}
+
+th {
+    font-weight: 500;
+    text-align: left;
 }
 
 h1 {
@@ -122,10 +127,6 @@ h4 {
     height: 40px;
 }
 
-.btn:active, .btn:focus, .btn-outline-main:focus {
-    border: none;
-}
-
 .btn:hover, a:hover {
     cursor: pointer;
 }
@@ -143,7 +144,14 @@ h4 {
 
 .btn-main:focus {
     background-color: #3f79a5;
-    transition-duration: 0;
+}
+
+.btn-red {
+    background-color: #ff5a5f;
+    border: 2px solid #ff5a5f;
+    color: white;
+    margin-top: 30px;
+    padding: 10px 20px;
 }
 
 .btn-outline-main {
@@ -165,7 +173,7 @@ h4 {
     background-color: transparent;
 }
 
-/* Header */
+// Header
 
 header {
     padding: 15px 0;
@@ -181,7 +189,7 @@ header {
     }
 }
 
-/* Hamburger Menu */
+// Hamburger menu
 
 .hamburger-menu {
     position: absolute;
@@ -246,6 +254,14 @@ header {
     display: inline-flex !important;
 }
 
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
 // Flex layout
 .flex-center {
     align-items: center;
@@ -300,28 +316,40 @@ footer.copyright-footer {
 }
 
 footer.fixed-footer {
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: white;
     z-index: 1;
     box-shadow: 0 4px 40px rgba(112, 144, 176, 0.1);
+    padding: 20px 0;
+}
 
+#player-footer {
     .song-control {
         gap: 10px;
     }
 
     h4 {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        margin-top: 5px;
     }
 
     > div {
-        padding: 15px 20px;
+
+        > div > div {
+            margin-top: 10px;
+            gap: 10px 30px;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
     }
 
     input[type="range"] {
         padding: 0;
         margin: 0 10px;
+        width: 100%;
     }
 
     p {
@@ -329,6 +357,7 @@ footer.fixed-footer {
     }
 
     .volume {
+        align-items: center;
 
         input {
             max-width: 100px;
@@ -454,6 +483,9 @@ img {
 }
 
 // Animations
+.no-transition {
+    transition: none !important;
+}
 
 @keyframes move-bottom-left {
     from {
@@ -575,6 +607,10 @@ img {
         border-radius: 5px;
     }
 
+    .btn-main {
+        margin-top: 0;
+    }
+
     .shop-search {
         position: relative;
         width: 100%;
@@ -631,6 +667,68 @@ img {
 
     button {
         width: 100%;
+    }
+}
+
+// Cart Section
+table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    border-collapse: collapse;
+
+    thead {
+        border-bottom: #dddddd solid 1px;
+    }
+
+    th {
+        padding-bottom: 15px;
+    }
+    
+    padding-bottom: 30px;
+}
+
+#cart-body {
+
+    input, select {
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    td {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 60px;
+        padding-top: 30px;
+    }
+
+    input {
+        max-width: 100px;
+        padding-right: 15px;
+        min-width: 80px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    select {
+        padding-left: 10px;
+        min-width: 70px;
+    }
+
+    button {
+        margin-top: 0;
+    }
+
+    .background-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        width: 100px;
+        height: 125px;
     }
 }
 
