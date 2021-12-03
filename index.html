@@ -53,7 +53,7 @@
                     <h2>Songs <hr class="underline"></h2>
                     <a href="https://www.youtube.com/channel/UCXj8C5C3jMIQJMsyOJk3U8A" target="_blank" class="d-flex flex-center a-link arrow-hover-animation">
                         <span style="margin-top: -5px;">See More</span> &nbsp;&nbsp;
-                        <img src="img/icons/right-arrow.svg" height="7px" style="margin-top: -5px;" class="icon" alt="arrow right">
+                        <img src="img/icons/right-arrow.svg" height="7" style="margin-top: -5px;" class="icon" alt="arrow right">
                     </a>
                 </div>
                 <section class="cards" id="songs"></section>
@@ -81,26 +81,26 @@
                 <div class="col col-md-5 col-concert-info">
                     <h2>Book Tickets Now!</h2>
                     <section class="concert-details d-flex">
-                        <span class="concert-detail d-flex flex-center">
-                            <img src="img/icons/location.svg" width="24px" height="24px" class="icon" alt="Location">
+                        <section class="concert-detail d-flex flex-center">
+                            <img src="img/icons/location.svg" width="24" height="24" class="icon" alt="Location">
                             <h3 class="medium d-inline-block">TBA</h3>
-                        </span>
-                        <span class="concert-detail d-flex flex-center">
-                            <img src="img/icons/ticket.svg" width="24px" height="24px" class="icon" alt="Location">
+                        </section>
+                        <section class="concert-detail d-flex flex-center">
+                            <img src="img/icons/ticket.svg" width="24" height="24" class="icon" alt="Location">
                             <h3 class="medium d-inline-block" id="ticket-remaining"></h3>
-                        </span>
-                        <span class="concert-detail d-flex flex-center">
-                            <img src="img/icons/date.svg" width="24px" height="24px" class="icon" alt="Location">
+                        </section>
+                        <section class="concert-detail d-flex flex-center">
+                            <img src="img/icons/date.svg" width="24" height="24" class="icon" alt="Location">
                             <h3 class="medium d-inline-block">22 Oct 3022</h3>
-                        </span>
-                        <span class="concert-detail d-flex">
-                            <img src="img/icons/email.svg" width="24px" height="24px" class="icon" alt="Location">
+                        </section>
+                        <section class="concert-detail d-flex">
+                            <img src="img/icons/email.svg" width="24" height="24" class="icon" alt="Location">
                             <h3 class="medium d-inline-block break-word">S10219150@connect.np.edu.sg</h3>
-                        </span>
-                        <span class="concert-detail d-flex">
-                            <img src="img/icons/phone.svg" width="24px" height="24px" class="icon" alt="Location">
+                        </section>
+                        <section class="concert-detail d-flex">
+                            <img src="img/icons/phone.svg" width="24" height="24" class="icon" alt="Location">
                             <h3 class="medium d-inline-block break-word">+65 1234 5678</h3>
-                        </span>
+                        </section>
                     </section>
                 </div>
                 <div class="col col-md-1"></div>
@@ -110,7 +110,7 @@
                         <input type="email" required placeholder="Email Address">
                         <input type="tel" required minlength="8" placeholder="Phone Number">
                         <select name="ticket-number" id="ticket-number" required>
-                            <option selected disabled value="0">Tickets</option>
+                            <option selected disabled>Tickets</option>
                             <option value="1">1 Ticket</option>
                             <option value="2">2 Tickets</option>
                             <option value="3">3 Tickets</option>
@@ -147,7 +147,7 @@
 
                         <div class="d-flex volume">
                             <button class="btn btn-none"><img src="img/icons/volume.svg" alt="play"></button>
-                            <input type="range" min="0" max="100" value="50" id="volume">
+                            <input min="0" max="100" value="50" id="volume">
                         </div>
                     </div>
                 </div>
@@ -157,11 +157,11 @@
     <footer class="container copyright-footer">
         <p><small>&copy;2021, Yun Tao. All rights reserved</small></p>
     </footer>
-</body>
 
-<script src="js/info.json" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript" defer></script>
-<script src="js/animation.js" type="text/javascript" defer></script>
-<script src="js/audioPlayer.js" type="text/javascript" defer></script>
+    <script src="js/info.json"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <script src="js/audioPlayer.js" defer></script>
+</body>
 
 </html>

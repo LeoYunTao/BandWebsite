@@ -100,6 +100,7 @@ playerSlider.addEventListener("change", event => {
 
 // Find the song and play it
 function findSongAndPlay(songName) {
+    
     let song = findSong(songs, songName)[0];
 
     playerFooterAudio.src = song.audioPATH;
@@ -118,12 +119,14 @@ let currentSongIndex = null;
 
 // Play next Song
 function nextSong() {
+    cardIconElement.src = "img/icons/play-arrow.svg";
     currentSongIndex = currentSongIndex < songs.length-1 ? currentSongIndex+1 : 0;
     findSongAndPlay(songs[currentSongIndex].name);
 }
 
 // Play previous Song
 function prevSong() {
+    cardIconElement.src = "img/icons/play-arrow.svg";
     currentSongIndex = currentSongIndex > 0 ? currentSongIndex-1 : songs.length-1;
     findSongAndPlay(songs[currentSongIndex].name);
 }
