@@ -1,9 +1,5 @@
 let cartItemsElement = document.querySelector('#cart-items');
 
-if (sessionStorage.getItem("items") === null) {
-    sessionStorage.setItem("items", []);
-}
-
 displayItems();
 
 function displayItems() {

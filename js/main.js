@@ -1,3 +1,6 @@
+if (sessionStorage.getItem("items") === null) {
+    sessionStorage.setItem("items", []);
+}
 
 function updateTicketPrice(TICKETPRICE) {
     const ticketNumber = parseInt(document.querySelector("#ticket-number").value);
