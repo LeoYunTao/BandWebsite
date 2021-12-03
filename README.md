@@ -40,7 +40,7 @@ Link to the wireframe: https://xd.adobe.com/view/1a47f761-2a84-4e81-91d5-72511e2
     - https://sass-lang.com/
 
 ## Testing
-
+Passes The W3C CSS Validation Service Without any error
 
 ### Bugs
 - In the cart section, the line on top of the total price jitters when the price changes.

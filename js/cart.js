@@ -95,4 +95,5 @@ function updatePrice() {
 function checkOut() {
     alert("Thank you for your purchase!");
     sessionStorage.clear();
+    window.location.href = "/";
 }
