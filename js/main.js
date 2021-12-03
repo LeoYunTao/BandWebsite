@@ -7,7 +7,15 @@ if (sessionStorage.getItem("items") === null) {
 function updateTicketPrice(TICKETPRICE) {
     const ticketNumber = parseInt(document.querySelector("#ticket-number").value);
     const totalPrice = document.querySelector("#total-price");
-    totalPrice.textContent = "S$" + parseFloat(ticketNumber * TICKETPRICE).toFixed(2);
+
+    let calculatedPrice = parseFloat(ticketNumber * TICKETPRICE).toFixed(2)
+
+    if (calculatedPrice == "NaN") {
+        totalPrice.textContent = "S$0.00";
+    }
+    else {
+        totalPrice.textContent = "S$" + parseFloat(ticketNumber * TICKETPRICE).toFixed(2);
+    }
 }
 
 // Hamburger menu setting the content to be visible on click
