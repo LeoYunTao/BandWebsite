@@ -32,6 +32,9 @@ Link to the wireframe: https://xd.adobe.com/view/1a47f761-2a84-4e81-91d5-72511e2
 
 ### Features Left to implement
 - Filter button to further filter the items based on the category
+- Lazy loading for images to speed up page loading speed
+- In the shop section able to click on the item for a new page to see all its detials
+- Unique page for each band members to know more about them
 
 ## Technologies Used
 - HTML, CSS & JS
