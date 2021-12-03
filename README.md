@@ -12,7 +12,7 @@ I also thought about the diffent stakeholder's goal:
 - As a SEO Engineer, I want to make the website as search engine optimized as possible, so that the ranking of the website will be higher on all the search engine and get more users
 - As a Web Deigner, I want to design the website with good UI & UX, so that the website is easy to navigate and not lose user due to poor design
 - As a Front-end Web Developer, I want to create website almost exactly like the deisgn while making it compatable and respoinsive to all the browser and differnet screen size, so that it can reach more users
-- As a Front-end Web Developer, I want to optimize the website as much as possible, so that useras will not leave due to the long waiting time
+- As a Front-end Web Developer, I want to optimize the website as much as possible, so that users will not leave due to the long waiting time
 
 Link to the wireframe: https://xd.adobe.com/view/1a47f761-2a84-4e81-91d5-72511e237538-4f14/
 
